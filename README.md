@@ -7,7 +7,7 @@ This repository serves as the central hub for my work in **WDD 131: Dynamic Web 
 
 * **Course Website:** WDD 131 – Dynamic Web Fundamentals
 * **Developer:** [Your Name Here]
-* **Live Deployment Link:** [https://your-github-username.github.io/wdd131](https://your-github-username.github.io/wdd131)
+* **Live Deployment Link:** [https://github.com/JohnOlshea/wdd131.git](https://github.com/JohnOlshea/wdd131.git)
 
 ---
 
