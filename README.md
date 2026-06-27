@@ -47,4 +47,4 @@ To maintain elite production-level performance, the following validation benchma
 
 1. Clone this repository to your desktop machine:
    ```bash
-   git clone [https://github.com/JohnOlshea/wdd131](https://github.com/JohnOlshea/wdd131)
+   git clone [https://github.com/JohnOlshea/wdd131.git](https://github.com/JohnOlshea/wdd131.git)
