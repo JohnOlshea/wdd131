@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – John O. Akala</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals home page for John O. Akala. Course landing page with about me section, location info, and web development resources.">
+    <meta name="author" content="John O. Akala">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/john-o-akala/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a
+                        href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
+                </li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>John O. Akala</h1>
+        <div class="grid-container">
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-body">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>
+                                My name is John O. Akala, and I am from Nigeria. I am a software engineer and technology enthusiast with a strong passion for building scalable, secure, and enterprise-grade software solutions. I enjoy learning new technologies, solving complex problems, and continuously improving my skills in software development, cloud computing, and artificial intelligence.
+                            </p>
+                        </div>
+                        <img src="images/profile.jpg" alt="Portrait of John O. Akala" width="150">
+                    </div>
+
+                    <div class="location-section">
+                        <h3>Lagos, Nigeria</h3>
+                        <hr>
+                        <div class="flag-container">
+                            <figure>
+                                <img src="images/nigeria_flag.webp" alt="Official Flag of Nigeria" width="140">
+                                <figcaption>Official Flag of Nigeria</figcaption>
+                            </figure>
+                            <p>
+                                Nigeria is the most populous country in Africa, with over 200 million people and more than 250 ethnic groups, making it one of the most culturally diverse nations in the world. It is known for its vibrant music and film industries, rich cultural heritage, beautiful landscapes, and entrepreneurial spirit. Nigeria is also one of Africa's largest economies and continues to play a significant role in technology, innovation, and business across the continent.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-body resources">
+                    <ul>
+                        <li><a href="https://dev.to">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com">CSS Tricks</a></li>
+                        <li><a href="https://www.w3schools.com">W3 Schools</a></li>
+                        <li><a href="https://www.udemy.com">Udemy</a></li>
+                        <li><a href="https://picsum.photos/">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌸 John Oluseye Akala 🌸 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

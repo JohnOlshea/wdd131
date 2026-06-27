@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Roboto', 'Segoe UI', sans-serif;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1f4e79;
+    color: #ffffff;
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    padding: 18px 16px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+nav {
+    background-color: #2b2b2b;
+}
+
+nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 20px;
+    text-align: center;
+    flex: 1;
+    transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #404040;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 30px;
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 20px 16px 16px;
+    color: #000;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 18px;
+    align-items: stretch;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    background-color: #1f4e79;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 18px 20px;
+    flex: 1;
+}
+
+.card-body.resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.about-content img {
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+.location-section {
+    clear: both;
+    width: calc(100% - 170px);
+    margin-top: 24px;
+    padding-top: 8px;
+}
+
+.location-section h3 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.location-section hr {
+    border: none;
+    border-top: 1px solid #c0c0c0;
+    width: 70%;
+    margin: 0 auto 16px;
+}
+
+.flag-container {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.flag-container figure {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.flag-container img {
+    border: 1px solid #888;
+    display: block;
+    margin-bottom: 6px;
+}
+
+figcaption {
+    font-size: 13px;
+    font-style: italic;
+    color: #333;
+}
+
+.flag-container p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    margin-bottom: 14px;
+    padding-left: 22px;
+    position: relative;
+}
+
+.card li::before {
+    content: "•";
+    position: absolute;
+    left: 6px;
+    color: #000;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.card a {
+    color: #1a0dab;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.card a:hover {
+    color: #c11b17;
+}
+
+footer {
+    background-color: #1f4e79;
+    color: #ffffff;
+    padding: 16px;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+#lastModified {
+    color: #ffeb3b;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    #course-title {
+        font-size: 22px;
+        padding: 14px 12px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 10px;
+        border-bottom: 1px solid #404040;
+        font-size: 16px;
+    }
+
+    nav li:last-child a {
+        border-bottom: none;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding: 16px 12px 12px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    main {
+        padding: 0 12px 20px;
+    }
+
+    .card-body {
+        padding: 14px 16px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content img {
+        width: 200px;
+    }
+
+    .flag-container {
+        flex-direction: column;
+    }
+
+    .flag-container img {
+        width: 180px;
+    }
+
+    .location-section {
+        width: 100%;
+    }
+
+    .location-section h3 {
+        font-size: 20px;
+    }
+
+    .about-text p,
+    .flag-container p {
+        font-size: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
