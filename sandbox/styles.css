@@ -1,0 +1,240 @@
+/* --- Reset & Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Header --- */
+.site-header {
+    background-color: #c60c30;
+    /* Match exact deep crimson red */
+    border-bottom: 6px solid #007a49;
+    /* Exact green stripe separator */
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.site-header h1 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* --- Main Layout Container --- */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+/* --- Image Controls --- */
+.image-container {
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive Image Toggle */
+.desktop-img {
+    display: none;
+}
+
+.mobile-img {
+    display: block;
+}
+
+/* --- Cards Styling (Mobile default) --- */
+.info-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    color: #000000;
+}
+
+.weather-icon {
+    display: block;
+    font-size: 3rem;
+    margin: 15px auto 5px auto;
+}
+
+.card-body {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    max-width: 280px;
+}
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.label {
+    font-weight: 700;
+    text-align: right;
+    width: 45%;
+    padding-right: 15px;
+}
+
+.value {
+    font-weight: 400;
+    text-align: left;
+    width: 55%;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #c60c30;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.modified-date {
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+
+/* ==========================================================================
+   Desktop / Landscape View (Breakpoint matching the layout transformation)
+   ========================================================================== */
+@media screen and (min-width: 800px) {
+
+    /* Toggle Images for Landscape Framework */
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+    }
+
+    /* Turn wrapper into a grid system to layer components directly over image */
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Force Image layer to stretch fully across the grid behind content */
+    .image-container {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: calc(100vh - 183px);
+        min-height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Assign cards into their respective layout grid positions over the background */
+    .data-card {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+        align-self: center;
+        margin-left: 40px;
+    }
+
+    .weather-card {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        align-self: center;
+        margin-right: 40px;
+    }
+
+    /* Overlaid frosted-glass card look mirroring your desktop screenshot */
+    .info-card {
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border: none;
+        padding: 0 0 20px 0;
+        width: 280px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Green block heading layout matching the desktop view */
+    .card-title {
+        position: relative;
+        margin-left: -9px;
+        width: 100%;
+        margin-top: 9px;
+        background-color: #007a49;
+        color: #ffffff;
+        font-size: 1.35rem;
+        font-weight: 600;
+        padding: 10px 15px;
+        text-align: left;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Inline element icon styling adjustment for desktop header strip */
+    .weather-icon {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .card-body {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+
+    .data-row {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+
+    .label {
+        width: 48%;
+        padding-right: 10px;
+    }
+
+    .value {
+        width: 52%;
+    }
+}
