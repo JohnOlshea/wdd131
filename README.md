@@ -1,50 +1,70 @@
 # WDD 131: Dynamic Web Fundamentals
-## Course Landing Page - Week 01 Assignment
 
-This repository serves as the central hub for my work in **WDD 131: Dynamic Web Fundamentals** at BYU-Idaho. The main landing page applies modern frontend standards using semantic HTML, responsive CSS layouts (Flexbox and Grid), and dynamic JavaScript functionality.
+This repository contains my weekly assignments for **WDD 131: Dynamic Web Fundamentals** at BYU-Idaho. Each assignment applies modern frontend standards using semantic HTML, responsive CSS, and dynamic JavaScript.
 
 ## Project Details
 
-* **Course Website:** WDD 131 – Dynamic Web Fundamentals
+* **Course:** WDD 131 – Dynamic Web Fundamentals
 * **Developer:** John Akala
-* **Live Deployment Link:** [https://github.com/JohnOlshea/wdd131.git](https://github.com/JohnOlshea/wdd131.git)
+* **Live Site:** [https://johnolshea.github.io/wdd131/](https://johnolshea.github.io/wdd131/)
 
 ---
 
-## Core Features & Requirements Met
+## Assignments
 
-### 📂 File & Directory Structure
-The repository is strictly organized using clean architecture guidelines:
-* `/index.html` - The central entry point for the landing page.
-* `/styles/base.css` - Custom structural layout and specific theme/typography stylings.
-* `/scripts/getdates.js` - Embedded site script loaded optimally using the `defer` attribute.
-* `/images/` - Local directory storing fully web-optimized images (no absolute external HTTP dependencies).
+### Week 01 – Course Landing Page (`/index.html`)
 
-### 🌐 Semantic HTML & SEO
-* Built using accessible layout milestones: `<header>`, `<nav>`, `<main>`, and `<footer>`.
-* Head elements feature precise SEO optimization tags (`meta charset`, `meta viewport`, descriptive `meta author`, and structured page descriptions targeting proper indexing parameters).
+The central hub landing page for the course.
 
-### 🎨 Responsive CSS Design
-* **Flexbox Navigation:** A top nav menu utilizing modern hover actions for visual feedback.
-* **Grid Card Layouts:** A centered, max-width content container leveraging `CSS Grid` to separate the bio card component from the course resources dashboard.
-* **Typography:** Integrates stylized fonts sourced cleanly from the Google Fonts API.
+**File Structure**
+* `/index.html` – Landing page entry point
+* `/styles/base.css` – Layout, theme, and typography styles
+* `/scripts/getdates.js` – Dynamic footer script (deferred)
+* `/images/` – Locally optimized images
 
-### ⚡ Dynamic JavaScript
-* Script execution safely handles DOM processing elements by utilizing `defer` on script tags.
-* Programmatically targets the DOM using localized scripts to calculate and display the live current copyright year and document `.lastModified` timestamp data dynamically.
+**Features**
+* Semantic HTML5 layout: `<header>`, `<nav>`, `<main>`, `<footer>`
+* Flexbox navigation with hover effects
+* CSS Grid card layout (bio + course resources)
+* Google Fonts integration
+* Dynamic copyright year and `lastModified` date via JavaScript
 
 ---
 
-## Testing & Performance Audits
-To maintain elite production-level performance, the following validation benchmarks were checked:
-1. **Lighthouse Audit:** Scored high performance indices on **Accessibility**, **Best Practices**, and **SEO**.
-2. **Page Weight Optimizations:** Enforced strict control rules ensuring overall initial payload weight rests soundly under the **500 kB limit** via image optimization protocols.
-3. **Cross-Platform Integrity:** Debugged local scripts via browser DevTools and checked rendering pipelines using Incognito viewports.
+### Week 02 – Temple Picture Album (`/temples.html`)
+
+A responsive picture album page featuring a hamburger navigation menu and CSS Grid image layout.
+
+**File Structure**
+* `/temples.html` – Temple album page
+* `/styles/temples.css` – Mobile-first base styles
+* `/styles/temples-large.css` – Larger screen overrides (tablet/desktop)
+* `/scripts/temples.js` – Hamburger menu toggle and dynamic footer
+* `/images/` – Locally optimized temple images
+
+**Features**
+* Mobile-first responsive design (1 → 2 → 3 column grid)
+* Hamburger menu with X-close toggle (JavaScript-driven)
+* CSS Flex navigation with hover effects
+* CSS Grid figure layout using `aspect-ratio` locked images
+* Dynamic copyright year and `lastModified` date via JavaScript
+* Google Fonts: Merriweather + Open Sans
 
 ---
 
-## How to Run & View Locally
+## Performance Standards (All Assignments)
 
-1. Clone this repository to your desktop machine:
-   ```bash
-   git clone https://github.com/JohnOlshea/wdd131.git
+* Lighthouse scores of **95+** on Accessibility, Best Practices, and SEO
+* Page weight under **500 kB**
+* Zero color contrast errors at WCAG AA level
+* Validated with the BYU-I Page Audit Tool
+
+---
+
+## Running Locally
+
+```bash
+git clone https://github.com/JohnOlshea/wdd131.git
+cd wdd131
+# Open any .html file with Live Server in VS Code
+```

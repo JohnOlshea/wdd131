@@ -1,0 +1,54 @@
+/* ==============================================
+   temples-large.css — Larger screen overrides
+   Applied after temples.css (mobile-first)
+   ============================================== */
+
+/* Tablet: 2 columns at 600px+ */
+@media (min-width: 600px) {
+  .temple-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  main h1 {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+}
+
+/* Desktop: 3 columns, switch to desktop nav at 769px+ */
+@media (min-width: 769px) {
+  /* Show desktop nav, hide hamburger */
+  header nav[aria-label="Main navigation"] {
+    display: block;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  /* Force mobile nav hidden regardless of JS state */
+  #mobile-nav {
+    display: none !important;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  main h1 {
+    font-size: 30px;
+    margin-bottom: 36px;
+  }
+
+  .site-title {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 36px 24px 60px;
+  }
+}
