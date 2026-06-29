@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted — Product Review</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <style>
+    /* Confirmation-specific styles */
+    .confirmation-card {
+      background-color: #ffffff;
+      border: 1px solid #c0b8c8;
+      border-radius: 10px;
+      max-width: 580px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 2px 12px rgba(42, 12, 46, 0.08);
+      text-align: center;
+    }
+
+    .check-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .confirmation-card h2 {
+      font-size: 1.75rem;
+      color: #2A0C2E;
+      margin-bottom: 0.75rem;
+    }
+
+    .confirmation-card p {
+      font-size: 1rem;
+      color: #444444;
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .review-counter {
+      background-color: #f4f0f8;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      display: inline-block;
+    }
+
+    .review-counter .counter-label {
+      font-size: 0.9rem;
+      color: #555555;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .review-counter .counter-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2A0C2E;
+      line-height: 1;
+    }
+
+    .summary-section {
+      text-align: left;
+      background-color: #f9f6fc;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .summary-section h3 {
+      font-size: 1rem;
+      color: #2A0C2E;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid #d8cfe0;
+      padding-bottom: 0.5rem;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.35rem 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #ede8f2;
+    }
+
+    .summary-row:last-child {
+      border-bottom: none;
+    }
+
+    .summary-label {
+      font-weight: bold;
+      color: #333333;
+      flex-shrink: 0;
+    }
+
+    .summary-value {
+      color: #555555;
+      text-align: right;
+      word-break: break-word;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.7rem 2rem;
+      background-color: #2A0C2E;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: background-color 0.2s;
+    }
+
+    .back-link:hover {
+      background-color: #4a1c50;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Product Review</h1>
+  </header>
+
+  <main class="main">
+    <div class="confirmation-card">
+      <span class="check-icon" aria-hidden="true">&#10003;</span>
+      <h2>Thank You!</h2>
+      <p>Your product review has been submitted successfully.</p>
+
+      <div class="review-counter">
+        <span class="counter-label">Total reviews submitted</span>
+        <span class="counter-number" id="review-count">0</span>
+      </div>
+
+      <div class="summary-section" id="review-summary">
+        <h3>Your Submission</h3>
+        <!-- Populated by JS from URL params -->
+      </div>
+
+      <a href="form.html" class="back-link">Write Another Review</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span class="footer-line">&copy;2024 &#127866; Rubia Magdelena Francesco &#127866;</span>
+    <span class="footer-line">Madagascar</span>
+    <span class="footer-line">Last Modification: <span id="mod-date"></span></span>
+  </footer>
+
+  <script src="scripts/review.js"></script>
+</body>
+</html>
