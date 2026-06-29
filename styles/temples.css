@@ -1,6 +1,4 @@
-/* ==============================================
-   temples.css — Mobile-first base styles
-   ============================================== */
+/* Mobile-first base styles */
 
 * {
   margin: 0;
@@ -43,32 +41,49 @@ header {
   letter-spacing: 0.3px;
 }
 
-/* ---- Desktop nav: hidden on mobile ---- */
-header nav[aria-label="Main navigation"] {
+/* ---- Primary nav: hidden on mobile ---- */
+#primary-nav {
   display: none;
+  background-color: #3B0A5F;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-header nav[aria-label="Main navigation"] ul {
-  display: flex;
+#primary-nav.open {
+  display: block;
+}
+
+#primary-nav ul {
+  display: block;
   list-style: none;
-  gap: 32px;
+  padding: 4px 0;
 }
 
-header nav[aria-label="Main navigation"] a {
+#primary-nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#primary-nav li:last-child {
+  border-bottom: none;
+}
+
+#primary-nav a {
+  display: block;
   color: #ffffff;
   text-decoration: none;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
-  padding: 4px 0;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease, opacity 0.2s ease;
+  padding: 14px 20px;
+  transition: background-color 0.2s ease;
 }
 
-header nav[aria-label="Main navigation"] a:hover,
-header nav[aria-label="Main navigation"] a.active {
-  border-bottom-color: #ffffff;
-  opacity: 0.9;
+#primary-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 /* ---- Hamburger button ---- */
@@ -109,50 +124,6 @@ header nav[aria-label="Main navigation"] a.active {
 
 #hamburger[aria-expanded="true"] span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
-}
-
-/* ---- Mobile nav ---- */
-#mobile-nav {
-  display: none;
-  background-color: #3B0A5F;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-#mobile-nav.open {
-  display: block;
-}
-
-#mobile-nav ul {
-  list-style: none;
-  padding: 4px 0;
-}
-
-#mobile-nav li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#mobile-nav li:last-child {
-  border-bottom: none;
-}
-
-#mobile-nav a {
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 14px 20px;
-  transition: background-color 0.2s ease;
-}
-
-#mobile-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.12);
 }
 
 /* ---- Main ---- */

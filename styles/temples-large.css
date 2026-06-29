@@ -1,7 +1,4 @@
-/* ==============================================
-   temples-large.css — Larger screen overrides
-   Applied after temples.css (mobile-first)
-   ============================================== */
+/* Larger screen overrides Applied after temples.css (mobile-first) */
 
 /* Tablet: 2 columns at 600px+ */
 @media (min-width: 600px) {
@@ -19,17 +16,48 @@
 /* Desktop: 3 columns, switch to desktop nav at 769px+ */
 @media (min-width: 769px) {
   /* Show desktop nav, hide hamburger */
-  header nav[aria-label="Main navigation"] {
+  #primary-nav {
     display: block;
+    position: static;
+    background-color: transparent;
+    border-top: none;
+  }
+
+  #primary-nav.open {
+    display: block;
+  }
+
+  #primary-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    padding: 0;
+  }
+
+  #primary-nav li {
+    border-bottom: none;
+  }
+
+  #primary-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, opacity 0.2s ease;
+  }
+
+  #primary-nav a:hover,
+  #primary-nav a.active {
+    border-bottom-color: #ffffff;
+    opacity: 0.9;
+    background-color: transparent;
   }
 
   #hamburger {
     display: none;
-  }
-
-  /* Force mobile nav hidden regardless of JS state */
-  #mobile-nav {
-    display: none !important;
   }
 
   .temple-grid {

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madagascar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background-color: #d21034;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Image Section */
+        .hero {
+            width: 100%;
+            position: relative;
+        }
+
+        .hero img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Mobile hero image */
+        .hero-mobile {
+            display: block;
+        }
+
+        .hero-mobile img {
+            height: auto;
+            max-height: 600px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-desktop {
+            display: none;
+        }
+
+        /* Data Section */
+        .data-section {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .data-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+        }
+
+        .data-label {
+            font-weight: 600;
+            color: #333;
+            margin-right: 12px;
+            text-align: right;
+        }
+
+        .data-value {
+            color: #333;
+            text-align: left;
+        }
+
+        /* Weather Section */
+        .weather-section {
+            background-color: #ffffff;
+            padding: 40px 20px 50px;
+            text-align: center;
+        }
+
+        .weather-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .weather-icon {
+            width: 80px;
+            height: 80px;
+            margin: 15px auto 25px;
+        }
+
+        .weather-icon img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .weather-row {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            margin-bottom: 10px;
+            font-size: 1.15rem;
+        }
+
+        .weather-label {
+            font-weight: 600;
+            color: #333;
+            margin-right: 12px;
+            text-align: right;
+        }
+
+        .weather-value {
+            color: #333;
+            text-align: left;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #d21034;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 1rem;
+        }
+
+        .footer p {
+            margin: 4px 0;
+        }
+
+        .footer .copyright {
+            font-size: 1.1rem;
+        }
+
+        .flower {
+            color: #ffb6c1;
+        }
+
+        /* Desktop Layout */
+        @media (min-width: 768px) {
+            .header h1 {
+                font-size: 3rem;
+                padding: 10px 0;
+            }
+
+            .hero-mobile {
+                display: none;
+            }
+
+            .hero-desktop {
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 600px;
+                overflow: hidden;
+            }
+
+            .hero-desktop img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center 20%;
+            }
+
+            /* Overlay panels on desktop */
+            .overlay-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 40px;
+                pointer-events: none;
+            }
+
+            .panel {
+                background-color: rgba(255, 255, 255, 0.92);
+                width: 280px;
+                pointer-events: auto;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            }
+
+            .panel-header {
+                background-color: #1e7648;
+                color: #ffffff;
+                padding: 12px 20px;
+                font-size: 1.4rem;
+                font-weight: 600;
+                text-align: left;
+            }
+
+            .panel-body {
+                padding: 20px;
+            }
+
+            .panel-row {
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+                margin-bottom: 10px;
+                font-size: 0.95rem;
+            }
+
+            .panel-label {
+                font-weight: 600;
+                color: #333;
+                margin-right: 8px;
+                text-align: right;
+                min-width: 100px;
+            }
+
+            .panel-value {
+                color: #333;
+                text-align: left;
+            }
+
+            .weather-header-inline {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .weather-header-inline .weather-icon-small {
+                width: 35px;
+                height: 35px;
+            }
+
+            .weather-header-inline .weather-icon-small img {
+                width: 100%;
+                height: 100%;
+            }
+
+            /* Hide mobile sections on desktop */
+            .data-section,
+            .weather-section {
+                display: none;
+            }
+
+            .footer {
+                padding: 20px;
+            }
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 767px) {
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .data-section h2,
+            .weather-section h2 {
+                font-size: 1.9rem;
+            }
+
+            .data-row,
+            .weather-row {
+                font-size: 1rem;
+            }
+
+            .footer {
+                font-size: 0.9rem;
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Madagascar</h1>
+    </header>
+
+    <!-- Hero Image - Mobile -->
+    <div class="hero hero-mobile">
+        <img src="https://images.unsplash.com/photo-1538099130811-745e64318258?w=800&q=80"
+            alt="Ring-tailed Lemur in Madagascar">
+    </div>
+
+    <!-- Hero Image - Desktop with Overlay Panels -->
+    <div class="hero-desktop">
+        <img class="hero-image mobile-img"
+            src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?q=80&w=600&auto=format&fit=crop"
+            alt="Madagascar Lemur Vertical">
+
+        <div class="overlay-container">
+            <!-- Data Panel -->
+            <div class="panel data-panel">
+                <div class="panel-header">Data</div>
+                <div class="panel-body">
+                    <div class="panel-row">
+                        <span class="panel-label">Area:</span>
+                        <span class="panel-value">587,041 sq km</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Population:</span>
+                        <span class="panel-value">27,691,018</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Capital:</span>
+                        <span class="panel-value">Antananarivo</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Languages:</span>
+                        <span class="panel-value">Malagasy, French</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Currency:</span>
+                        <span class="panel-value">Malagasy Ariary</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Time Zone:</span>
+                        <span class="panel-value">UTC+3</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Calling Code:</span>
+                        <span class="panel-value">+261</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Internet TLD:</span>
+                        <span class="panel-value">.mg</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather Panel -->
+            <div class="panel weather-panel">
+                <div class="panel-header weather-header-inline">
+                    <span>Weather</span>
+                    <span class="weather-icon-small">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Sun -->
+                            <circle cx="55" cy="35" r="18" fill="#f4a261" />
+                            <line x1="55" y1="8" x2="55" y2="14" stroke="#f4a261" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="55" y1="56" x2="55" y2="62" stroke="#f4a261" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="28" y1="35" x2="34" y2="35" stroke="#f4a261" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="76" y1="35" x2="82" y2="35" stroke="#f4a261" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="36" y1="16" x2="40" y2="20" stroke="#f4a261" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="70" y1="50" x2="74" y2="54" stroke="#f4a261" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="36" y1="54" x2="40" y2="50" stroke="#f4a261" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="70" y1="20" x2="74" y2="16" stroke="#f4a261" stroke-width="3"
+                                stroke-linecap="round" />
+                            <!-- Cloud -->
+                            <ellipse cx="40" cy="62" rx="22" ry="14" fill="#d4d4d4" />
+                            <ellipse cx="55" cy="58" rx="18" ry="12" fill="#d4d4d4" />
+                            <ellipse cx="30" cy="58" rx="14" ry="11" fill="#d4d4d4" />
+                            <!-- Rain dots -->
+                            <circle cx="32" cy="78" r="2.5" fill="#888" />
+                            <circle cx="42" cy="82" r="2.5" fill="#888" />
+                            <circle cx="52" cy="78" r="2.5" fill="#888" />
+                            <circle cx="38" cy="88" r="2.5" fill="#888" />
+                            <circle cx="48" cy="92" r="2.5" fill="#888" />
+                            <circle cx="58" cy="85" r="2.5" fill="#888" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <div class="panel-row">
+                        <span class="panel-label">Temperature:</span>
+                        <span class="panel-value">10 °C</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Conditions:</span>
+                        <span class="panel-value">Partly Cloudy</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Wind:</span>
+                        <span class="panel-value">5 km/h</span>
+                    </div>
+                    <div class="panel-row">
+                        <span class="panel-label">Wind Chill:</span>
+                        <span class="panel-value">9.8 °C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Section - Mobile Only -->
+    <section class="data-section">
+        <h2>Data</h2>
+        <div class="data-row">
+            <span class="data-label">Area:</span>
+            <span class="data-value">587,041 sq km</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Population:</span>
+            <span class="data-value">27,691,018</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Capital:</span>
+            <span class="data-value">Antananarivo</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Languages:</span>
+            <span class="data-value">Malagasy, French</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Currency:</span>
+            <span class="data-value">Malagasy Ariary</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Time Zone:</span>
+            <span class="data-value">UTC+3</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Calling Code:</span>
+            <span class="data-value">+261</span>
+        </div>
+        <div class="data-row">
+            <span class="data-label">Internet TLD:</span>
+            <span class="data-value">.mg</span>
+        </div>
+    </section>
+
+    <!-- Weather Section - Mobile Only -->
+    <section class="weather-section">
+        <h2>Weather</h2>
+        <div class="weather-icon">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Sun -->
+                <circle cx="55" cy="35" r="18" fill="#f4a261" />
+                <line x1="55" y1="8" x2="55" y2="14" stroke="#f4a261" stroke-width="3" stroke-linecap="round" />
+                <line x1="55" y1="56" x2="55" y2="62" stroke="#f4a261" stroke-width="3" stroke-linecap="round" />
+                <line x1="28" y1="35" x2="34" y2="35" stroke="#f4a261" stroke-width="3" stroke-linecap="round" />
+                <line x1="76" y1="35" x2="82" y2="35" stroke="#f4a261" stroke-width="3" stroke-linecap="round" />
+                <line x1="36" y1="16" x2="40" y2="20" stroke="#f4a261" stroke-width="3" stroke-linecap="round" />
+                <line x1="70" y1="50" x2="74" y2="54" stroke="#f4a261" stroke-width="3" stroke-linecap="round" />
+                <line x1="36" y1="54" x2="40" y2="50" stroke="#f4a261" stroke-width="3" stroke-linecap="round" />
+                <line x1="70" y1="20" x2="74" y2="16" stroke="#f4a261" stroke-width="3" stroke-linecap="round" />
+                <!-- Cloud -->
+                <ellipse cx="40" cy="62" rx="22" ry="14" fill="#d4d4d4" />
+                <ellipse cx="55" cy="58" rx="18" ry="12" fill="#d4d4d4" />
+                <ellipse cx="30" cy="58" rx="14" ry="11" fill="#d4d4d4" />
+                <!-- Rain dots -->
+                <circle cx="32" cy="78" r="2.5" fill="#888" />
+                <circle cx="42" cy="82" r="2.5" fill="#888" />
+                <circle cx="52" cy="78" r="2.5" fill="#888" />
+                <circle cx="38" cy="88" r="2.5" fill="#888" />
+                <circle cx="48" cy="92" r="2.5" fill="#888" />
+                <circle cx="58" cy="85" r="2.5" fill="#888" />
+            </svg>
+        </div>
+        <div class="weather-row">
+            <span class="weather-label">Temperature:</span>
+            <span class="weather-value">10 °C</span>
+        </div>
+        <div class="weather-row">
+            <span class="weather-label">Conditions:</span>
+            <span class="weather-value">Partly Cloudy</span>
+        </div>
+        <div class="weather-row">
+            <span class="weather-label">Wind:</span>
+            <span class="weather-value">5 km/h</span>
+        </div>
+        <div class="weather-row">
+            <span class="weather-label">Wind Chill:</span>
+            <span class="weather-value">9.8 °C</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="copyright">©2024 <span class="flower">🌸</span> Rubia Magdelena Francesco <span
+                class="flower">🌸</span> Madagascar</p>
+        <p>Last Modification: 02/08/2024 22:47:47</p>
+    </footer>
+</body>
+
+</html>

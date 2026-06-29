@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temple Album</title>
   <meta name="description" content="A picture album showcasing beautiful LDS temples around the world.">
+  <meta name="author" content="John Oluseye Akala">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,13 @@
   <div class="header-inner">
     <span class="site-title">Temple Album</span>
 
-    <nav aria-label="Main navigation">
+    <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="primary-nav" aria-label="Main navigation">
       <ul>
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#">Old</a></li>
@@ -33,23 +40,7 @@
         <li><a href="#">Small</a></li>
       </ul>
     </nav>
-
-    <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </div>
-
-  <nav id="mobile-nav" aria-label="Mobile navigation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Old</a></li>
-      <li><a href="#">New</a></li>
-      <li><a href="#">Large</a></li>
-      <li><a href="#">Small</a></li>
-    </ul>
-  </nav>
 </header>
 
 <main>
