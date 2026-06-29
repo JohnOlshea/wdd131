@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madagascar</title>
-    <meta name="description" content="Explore Madagascar – the island nation known for unique wildlife, stunning landscapes, and rich culture.">
+    <meta name="description"
+        content="Explore Madagascar – the island nation known for unique wildlife, stunning landscapes, and rich culture.">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="scripts/place.js" defer></script>
 </head>
+
 <body>
     <header class="site-header">
         <h1>Madagascar</h1>
@@ -21,23 +24,12 @@
         <!-- Hero image: srcset with WebP for responsive swap -->
         <div class="image-container">
             <picture>
-                <source
-                    media="(min-width: 800px)"
-                    srcset="https://images.unsplash.com/photo-1560743173-567a3b5658b1?q=80&w=1200&fm=webp 1200w,
-                            https://images.unsplash.com/photo-1560743173-567a3b5658b1?q=80&w=1600&fm=webp 1600w"
-                    sizes="100vw"
-                    type="image/webp">
-                <source
-                    srcset="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?q=80&w=600&fm=webp 600w,
-                            https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?q=80&w=900&fm=webp 900w"
-                    sizes="100vw"
-                    type="image/webp">
-                <img
-                    src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?q=80&w=600&auto=format&fit=crop"
-                    alt="A ring-tailed lemur in Madagascar"
-                    class="hero-image"
-                    width="600"
-                    height="800">
+                <source media="(min-width: 800px)" srcset="images/hero-desktop-1200.webp 1200w,
+                            images/hero-desktop-1600.webp 1600w" sizes="100vw" type="image/webp">
+                <source srcset="images/hero-mobile-600.webp 600w,
+                            images/hero-mobile-900.webp 900w" sizes="100vw" type="image/webp">
+                <img src="images/hero-mobile-600.webp" alt="A cute cat on the bed somewhere in the world"
+                    class="hero-image" width="600" height="800">
             </picture>
         </div>
 
@@ -48,8 +40,10 @@
                 <div class="data-row"><span class="label">Area:</span><span class="value">587,041 sq km</span></div>
                 <div class="data-row"><span class="label">Population:</span><span class="value">27,691,018</span></div>
                 <div class="data-row"><span class="label">Capital:</span><span class="value">Antananarivo</span></div>
-                <div class="data-row"><span class="label">Languages:</span><span class="value">Malagasy, French</span></div>
-                <div class="data-row"><span class="label">Currency:</span><span class="value">Malagasy Ariary</span></div>
+                <div class="data-row"><span class="label">Languages:</span><span class="value">Malagasy, French</span>
+                </div>
+                <div class="data-row"><span class="label">Currency:</span><span class="value">Malagasy Ariary</span>
+                </div>
                 <div class="data-row"><span class="label">Time Zone:</span><span class="value">UTC+3</span></div>
                 <div class="data-row"><span class="label">Calling Code:</span><span class="value">+261</span></div>
                 <div class="data-row"><span class="label">Internet TLD:</span><span class="value">.mg</span></div>
@@ -63,16 +57,26 @@
             <h2 class="card-title weather-heading">Weather</h2>
 
             <!-- SVG weather icon — mobile only (hidden on desktop via CSS) -->
-            <svg class="weather-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                 role="img" aria-label="Partly cloudy weather icon" width="64" height="64">
-                <path d="M460-160q-75 0-127.5-52.5T280-340q0-72 46-124t116-58v-98q0-50 35-85t85-35q50 0 85 35t35 85v98q70 6 116 58t46 124q0 75-52.5 127.5T460-160Zm0-80q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm0-200q14 0 27 2t26 6v-228q0-17-11.5-28.5T474-700q-17 0-28.5 11.5T434-660v228q13-4 26-6t27-2ZM120-440q0-117 68-208.5T360-766v88q-72 26-116 91t-44 147q0 88 53 154t137 82v82q-112-18-191-101.5T120-440Zm680 0q0-112-79-195.5T530-737v-82q124 18 202 109t78 270q0 109-54.5 197T600-118v-82q84-28 142-104.5T800-440ZM480-400Z"/>
+            <svg class="weather-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img"
+                aria-label="Partly cloudy weather icon" width="64" height="64">
+                <path
+                    d="M512 512m-277.333333 0a277.333333 277.333333 0 1 0 554.666666 0 277.333333 277.333333 0 1 0-554.666666 0Z"
+                    fill="#EFD358" />
+                <path
+                    d="M85.333333 533.333333H42.666667a21.333333 21.333333 0 1 1 0-42.666666h42.666666a21.333333 21.333333 0 1 1 0 42.666666zM209.066667 230.4a21.269333 21.269333 0 0 1-15.082667-6.250667l-29.866667-29.866666a21.333333 21.333333 0 1 1 30.165334-30.165334l29.866666 29.866667A21.333333 21.333333 0 0 1 209.066667 230.4zM512 106.666667a21.333333 21.333333 0 0 1-21.333333-21.333334V42.666667a21.333333 21.333333 0 1 1 42.666666 0v42.666666a21.333333 21.333333 0 0 1-21.333333 21.333334zM814.933333 230.4a21.333333 21.333333 0 0 1-15.082666-36.416l29.866666-29.866667a21.333333 21.333333 0 1 1 30.165334 30.165334l-29.866667 29.866666a21.269333 21.269333 0 0 1-15.082667 6.250667zM981.333333 533.333333h-42.666666a21.333333 21.333333 0 1 1 0-42.666666h42.666666a21.333333 21.333333 0 1 1 0 42.666666z"
+                    fill="#EFD358" />
+                <path
+                    d="M810.666667 1002.666667H213.333333c-105.856 0-192-86.122667-192-192s86.144-192 192-192c17.322667 0 34.624 2.453333 51.669334 7.338666A256.128 256.128 0 0 1 490.666667 490.666667a255.786667 255.786667 0 0 1 232.533333 149.290666A189.653333 189.653333 0 0 1 810.666667 618.666667c105.856 0 192 86.122667 192 192s-86.144 192-192 192z"
+                    fill="#E0E0E0" />
             </svg>
 
             <div class="card-body">
                 <div class="data-row"><span class="label">Temperature:</span><span class="value">10 °C</span></div>
-                <div class="data-row"><span class="label">Conditions:</span><span class="value">Partly Cloudy</span></div>
+                <div class="data-row"><span class="label">Conditions:</span><span class="value">Partly Cloudy</span>
+                </div>
                 <div class="data-row"><span class="label">Wind:</span><span class="value">5 km/h</span></div>
-                <div class="data-row"><span class="label">Wind Chill:</span><span class="value" id="wind-chill">--</span></div>
+                <div class="data-row"><span class="label">Wind Chill:</span><span class="value"
+                        id="wind-chill">--</span></div>
             </div>
         </section>
     </main>
@@ -82,4 +86,5 @@
         <p class="modified-date">Last Modification: <span id="last-modified"></span></p>
     </footer>
 </body>
+
 </html>
