@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album</title>
+  <meta name="description" content="A filterable picture album showcasing beautiful LDS temples around the world.">
+  <meta name="author" content="John Oluseye Akala">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Mobile-first base styles -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <!-- Larger screen overrides -->
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <span class="site-title">Temple Album</span>
+    <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="primary-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#" data-filter="home" class="active">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <h1 id="filter-heading">Home</h1>
+  <div class="temple-grid" id="temple-grid">
+    <!-- Temple cards are injected here by JavaScript -->
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <p>©<span id="copy-year"></span> 🌸 John Oluseye Akala 🌸 Nigeria</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </div>
+</footer>
+</body>
+</html>

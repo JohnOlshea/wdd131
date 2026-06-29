@@ -1,0 +1,75 @@
+/* Larger screen overrides — applied after filtered-temples.css (mobile-first) */
+
+/* Tablet: 2 columns at 600px+ */
+@media (min-width: 600px) {
+  .temple-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  main h1 {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+}
+
+/* Desktop: 3 columns + desktop nav at 769px+ */
+@media (min-width: 769px) {
+  /* Show desktop nav, hide hamburger */
+  #primary-nav {
+    display: block;
+    position: static;
+    background-color: transparent;
+    border-top: none;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+  #primary-nav.open {
+    display: block;
+  }
+  #primary-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    padding: 0;
+  }
+  #primary-nav li {
+    border-bottom: none;
+  }
+  #primary-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, opacity 0.2s ease;
+  }
+  #primary-nav a:hover,
+  #primary-nav a.active {
+    border-bottom-color: #ffffff;
+    opacity: 0.9;
+    background-color: transparent;
+  }
+  #hamburger {
+    display: none;
+  }
+  .temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  main h1 {
+    font-size: 30px;
+    margin-bottom: 36px;
+  }
+  .site-title {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 36px 24px 60px;
+  }
+}
