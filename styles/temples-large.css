@@ -21,6 +21,9 @@
     position: static;
     background-color: transparent;
     border-top: none;
+    top: auto;      /* Reset unused top */
+    left: auto;     /* Reset unused left */
+    right: auto;    /* Reset unused right */
   }
 
   #primary-nav.open {
