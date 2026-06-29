@@ -63,9 +63,10 @@ label,
   color: #1a1a1a;
 }
 
-.required-mark {
+abbr[title="required"] {
   color: #9b1c1c;
   font-weight: bold;
+  text-decoration: none;
   margin-left: 2px;
 }
 
