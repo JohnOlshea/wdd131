@@ -79,15 +79,15 @@ const temples = [
     dedicated: "2019, March, 10",
     area: 41010,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior-1649078-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
   },
   {
-    templeName: "Nauvoo Illinois",
-    location: "Nauvoo, Illinois, United States",
-    dedicated: "2002, June, 27",
-    area: 54000,
+    templeName: "Provo Utah Rock Canyon Temple",
+    location: "Provo, Utah United States",
+    dedicated: "1969, September, 15",
+    area: 163000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nauvoo-illinois/400x250/nauvoo-illinois-temple-evening-panoramic-1648541-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/provo-utah-rock-canyon-temple/provo-utah-rock-canyon-temple-45659-main.jpg"
   }
 ];
 
