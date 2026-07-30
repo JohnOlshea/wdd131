@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kwarter - Website Planning Document | WDD 131</title>
+  <meta name="description" content="Website planning document for Kwarter - A platform connecting students, graduates, mentors and employers across Africa">
+  <meta name="author" content="John Alaska">
+  <link rel="stylesheet" href="siteplan.css">
+</head>
+<body>
+  <header>
+    <h1>Kwarter Site Plan</h1>
+    <p>WDD 131: Dynamic Web Fundamentals - W05 Project: Website Planning Document</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Site Name: Kwarter</h2>
+      <div class="logo-box">
+        <div class="logo-icon">k</div>
+        <strong>kwarter</strong>
+      </div>
+      <p><strong>Proposed Domain:</strong> kwarter.africa (kwarter.com alternative)</p>
+      <p>This name was chosen because:</p>
+      <ul>
+        <li><strong>Kwar</strong> - derived from "quarter" representing a district/community where career growth happens, and also evokes "Kwar" as in knowledge + career</li>
+        <li>Short, memorable, 7 letters, easy to pronounce across African markets</li>
+        <li>Represents the four communities it serves: Students, Employers, Mentors, Training Providers - a quarter for each</li>
+        <li>Modern tech-startup feel suitable for Gen Z and employers like Andela, Flutterwave, Paystack</li>
+        <li>Available brand identity - works as both a platform and a career community</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>Kwarter is a website that introduces a platform designed to help university students and recent graduates discover internship opportunities, career mentorship, and industry-relevant training programs across Africa, starting in Nigeria.</p>
+      <p>The site will provide:</p>
+      <ul>
+        <li><strong>For Students & Graduates:</strong> Searchable internship listings with filters by industry, location, duration and skill level, saved opportunities, CV builder, and career resources</li>
+        <li><strong>For Employers:</strong> Ability to post internships, vetted candidate profiles, employer branding tools, and talent pipeline management</li>
+        <li><strong>For Professional Mentors:</strong> Platform to guide students, flexible scheduling, mentor profiles, reviews, and impact tracking</li>
+        <li><strong>For Training Providers:</strong> Course listing marketplace, verified enrollment, analytics, and certificate issuance</li>
+        <li>Information about graduate unemployment challenges (60% struggle within 12 months), the employer skills gap (73%), and how Kwarter bridges education to employment</li>
+        <li>Dynamic features: Smart Internship Search, Mentor Matching, Skill Development progress tracking, searchable categories, saved opportunities using localStorage, interactive FAQ, and application/contact forms</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Scenarios</h2>
+      <p>Target Audience: Nigerian university students, recent graduates, employers, and professional mentors.</p>
+      
+      <div class="scenario">
+        <strong>Scenario 1 - Student:</strong> "I just graduated in Computer Science from University of Lagos. Where can I find tech internships in Lagos that don't require 2 years experience, and can I get a mentor in software engineering to review my CV?"
+      </div>
+
+      <div class="scenario">
+        <strong>Scenario 2 - Employer:</strong> "I'm a hiring manager at a fintech startup. How do I post a 3-month paid Product Design internship on Kwarter, and how are candidates vetted to ensure they have basic design skills?"
+      </div>
+
+      <div class="scenario">
+        <strong>Scenario 3 - Mentor:</strong> "I have 8 years experience in Data Analytics at Andela. How does mentor matching work, how much time commitment is needed, and can I track the impact I have on students?"
+      </div>
+
+      <div class="scenario">
+        <strong>Scenario 4 - Parent/Advisor:</strong> "Is Kwarter free to use for students, which cities and countries do you operate in, and what is the placement success rate?"
+      </div>
+    </section>
+
+    <section>
+      <h2>Color Schema</h2>
+      <p>Colors extracted directly from the Kwarter live prototype on localhost:5173 for brand consistency.</p>
+      
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="color-swatch" style="background:#12372A;"></div>
+          <div class="color-info">
+            <strong>Primary - Forest Green #12372A</strong><br>
+            <code>var(--primary)</code><br>
+            Used for: Headings (h1, h2, h3), header navigation, primary buttons (Get Started), dark sections (CTA, stats), footer background
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#F5F0E8;"></div>
+          <div class="color-info">
+            <strong>Secondary - Warm Cream #F5F0E8</strong><br>
+            <code>var(--secondary)</code><br>
+            Used for: Page background, card backgrounds (Four Communities), FAQ section, creates soft contrast to reduce eye strain
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#E8A838;"></div>
+          <div class="color-info">
+            <strong>Accent - Amber Gold #E8A838</strong><br>
+            <code>var(--accent)</code><br>
+            Used for: Call-to-action highlights, "Get Started Free" button, progress bars, 94% stat badge, hover states, link accents
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="color-swatch" style="background:#2D2A26;"></div>
+          <div class="color-info">
+            <strong>Text - Charcoal #2D2A26</strong><br>
+            Used for: Body paragraphs, list content, high readability on cream background (meets WCAG AA)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <p>Two fonts selected for modern, professional, African youth appeal while maintaining high readability.</p>
+      
+      <div class="font-sample">
+        <h3 style="font-family:'Fraunces', serif;">Font 1: Fraunces - Headings</h3>
+        <p style="font-family:'Fraunces', serif; font-size:1.4rem; font-weight:800;">The platform that launches careers across Africa</p>
+        <p>Source: Google Fonts - Fraunces (Serif, 700-800 weight). Used for: All h1, h2, h3 headings, hero titles, section titles like "Everything in one place, built for your career." Chosen because it feels editorial, confident, and trustworthy - important for career decisions. Its high contrast works well with the dark green brand.</p>
+      </div>
+
+      <div class="font-sample">
+        <h3>Font 2: Plus Jakarta Sans - Body</h3>
+        <p style="font-family:'Plus Jakarta Sans', sans-serif;">Join thousands of students, graduates, and professionals already building their future on Kwarter. It's free to get started.</p>
+        <p>Source: Google Fonts - Plus Jakarta Sans (400, 500, 600, 700). Used for: All body text, paragraphs, navigation, buttons, card content, forms, footer links. Chosen because it's a clean, highly legible sans-serif optimized for screens, modern tech aesthetic matching companies like Flutterwave, Andela, Paystack, and excellent readability at small sizes on mobile.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Wireframes</h2>
+      <p>Home page layout - designed mobile-first, then enhanced for wider viewports. Both maintain same content hierarchy but adapt layout.</p>
+      
+      <div class="wireframes">
+        <figure class="wireframe-item">
+          <figcaption>Desktop View (Wider) - 900px+ | Grid layout with side-by-side sections</figcaption>
+          <img src="images/desktop.svg" alt="Wireframe of Kwarter home page desktop view showing header, hero with image, trusted logos, challenge section, four communities grid, platform features, by the numbers, success stories, industry grid, FAQ, CTA, and footer">
+        </figure>
+
+        <figure class="wireframe-item">
+          <figcaption>Mobile View (Portrait) - 320px-600px | Single column stacked layout</figcaption>
+          <img src="images/mobile.webp" alt="Wireframe of Kwarter home page mobile view showing hamburger menu, stacked hero, trusted logos, challenge stacked, communities stacked, features 2x2, industry 2-col grid, FAQ, CTA, footer">
+        </figure>
+      </div>
+
+      <h3>Layout Notes:</h3>
+      <ul>
+        <li><strong>Header:</strong> Desktop - Logo left, nav center (How It Works, For Students, For Employers, Mentors, FAQ), Log In + Get Started right. Mobile - Logo + Hamburger</li>
+        <li><strong>Hero:</strong> Desktop - 2 columns (text left, image with floating stats right). Mobile - Image first, then text stacked</li>
+        <li><strong>Four Communities:</strong> Desktop - 4 cards in row. Mobile - 1 column stacked</li>
+        <li><strong>Platform Features:</strong> Smart Search, Mentor Matching, Skill Dev, Career Resources - Interactive JS filtering</li>
+        <li><strong>Dynamic Elements Planned:</strong> Internship filter with array methods, localStorage for saved internships, FAQ accordion, email validation, dynamic stats counter</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>WDD 131 Project | Kwarter Site Plan | John Alaska | 2025 | <a href="#">References will be linked here in final project</a></p>
+    <p>Last Modified: July 30, 2026</p>
+  </footer>
+</body>
+</html>
